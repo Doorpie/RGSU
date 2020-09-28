@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"Главная"
+})
+
+<body>
+	<div class="wrapper _lock">
+		@@include('_header.html',{})
+		<main class="page">
+			<div class="container">
+				<div class="row">
+					<div class="col-3 col-sm-3 col-lg-3 col-xl-3">
+						<aside class="page__sidebar sidebar">
+							@@include('_sidebar.html',{})
+						</aside>
+					</div>
+					<div class="col-12 col-sm-12 col-lg-9 col-xl-9">
+						<div class="page__main main">
+							<h1 class="main__title">Главная</h1>
+							<ul class="main__nav main-nav">
+								<li class="main-nav__item">
+									<a href="./reservation.html" class="main-nav__link">Бронирование --></a>
+								</li>
+								<li class="main-nav__item">
+									<a href="./council.html" class="main-nav__link">Ученый совет --></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		@@include('_footer.html',{})
+	</div>
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+</body>
+
+</html>

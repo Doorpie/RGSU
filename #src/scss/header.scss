@@ -1,0 +1,235 @@
+// Шапка и позицирование блоков в шапке
+.header{
+	position: relative;
+
+	margin-bottom: 42px;
+	padding-top: 14px;
+
+	&:after{
+		content: '';
+
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		width: 100%;
+		height: 436px;
+
+		background: linear-gradient(84.71deg, #3464E0 1.19%, #2955C9 99.81%);
+		z-index: -1;
+	}
+
+	&:before{
+		content:'';
+
+		position: absolute;
+		left: 0;
+		bottom: -379px;
+
+		width: 0;
+		height: 0;
+		
+		border-bottom: 66px solid #F1F4F9;
+		border-right: 100vw solid transparent;  
+	}
+
+	@media (max-width: 480px)  {
+		margin-bottom: 12px;;
+	}
+	
+	// Позицианирование элементов шапки.
+
+	&__vacancies{
+		margin-left: 25px;
+	}
+
+	&__nav {
+		@media (max-width: 991px) {
+			margin-bottom: 10px;
+			padding-top: 0;
+		}
+	}
+}
+
+// Блок логотип
+
+.logo{
+	fill: #fff;
+
+	&__img{
+		width: 302px;
+		height: 44px;
+
+		@media (max-width: 1390px) {
+			width: 280px;
+		}
+
+		@media (max-width: 480px) {
+			width: 200px;
+		}
+	}
+}
+
+// Блок меню иконка
+
+.burger-icon {
+	position: relative;
+	top: 0;
+
+	display: none;
+
+	width: 40px;
+	height: 40px;
+
+	z-index: 99;
+	cursor: pointer;
+
+	@media (max-width: 991px){
+		display: block;
+	}
+
+	span {
+		background-color: #fff;
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		left: 0;
+		top: 20px;
+	}
+
+	&:before,
+	&:after {
+		content: '';
+		background-color: #fff;
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		left: 0;
+	}
+
+	&:before {
+		top: 11px;
+	}
+
+	&:after {
+		bottom: 9px;
+	}
+
+	&._active:before {
+		transform: rotate(45deg);
+		top: calc(50% - 1px);
+	}
+
+	&._active:after {
+		transform: rotate(-45deg);
+		top: calc(50% - 1px);
+	}
+
+	&._active span {
+		transform: scale(0);
+	}
+}
+
+// Блок меню
+
+.header-nav{
+	display: flex;
+	flex-basis: 100%;
+
+	&__list{
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		flex-basis: 100%;
+
+		@media (max-width: 991px) {
+			flex-direction: column;
+			padding: 10px;
+		}	
+	}
+
+	&__link{
+		font: 400 18px/21px Russia;
+        word-break: break-word;
+		overflow: hidden;
+		
+		color: #9CBAF0;
+
+		&:hover{
+			color:#fff
+		}
+		
+		@media (max-width: 1200px) {
+			font-size: 15px;
+		}
+
+		@media (max-width: 991px) {
+			display: flex;
+			justify-content: center;
+			padding: 20px 5px;
+				
+			color: #444444;
+
+			background-color: #f1f4f9;
+			border: 1px solid #e5e5e5;
+	
+			&:hover{
+				color:#3464e0;
+			}
+		}
+	}
+}
+
+// Блок вакансии
+
+.vacancies{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+
+	@media (max-width: 590px) {
+		display:none;
+	}
+	
+	&__link{
+		position: relative;
+
+		display: flex;
+		align-items: center;
+		padding: 13px 51px 13px 63px;
+
+		font:400 14px/16px Russia;
+        word-break: break-word;
+		overflow: hidden;
+		
+		color: #fff;
+
+		background: #1740AA;
+		border-radius: 50px;
+		
+		@media (max-width: 1390px) {
+			padding: 13px 25px 13px 57px;
+		}
+
+		@media (max-width: 1200px) {
+			padding: 13px 12px 13px 36px;
+		}	
+	}
+
+	&__icon{
+		position: absolute;
+		top: 9px;
+		left: 22px;
+		width: 25px;
+        height: 25px;
+
+		fill: #fff;
+
+		@media (max-width: 1200px) {
+			top: 11px;
+			left: 10px;
+			width: 20px;
+			height: 20px;
+		}
+	}
+}
