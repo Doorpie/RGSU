@@ -3,8 +3,12 @@
 
 .page {
 	&__council{
-		margin-bottom: 14px;
-	}
+        margin-bottom: 114px;
+        
+        @media (max-width: 1390px) {
+            margin-bottom: 0;
+        }
+    }
 }
 
 // Блок ученый совет
@@ -13,7 +17,6 @@
 	overflow: hidden;
 	
 	&__title{
-		margin-left: 1px;
 		margin-bottom: 62px;
 		
 		font: 400 24px/27px Russia;
@@ -26,7 +29,6 @@
 	}
 
 	&__tabs{
-		margin-right: 1px;
 		padding: 19px;
 	}
 }
@@ -39,8 +41,13 @@
     }
     
     &__item--council{
-        padding: 16px 36px 18px 18px;
         margin-right: 32px;
+        padding: 16px 36px 18px 18px;
+
+    }
+
+    &__content--council {
+        padding-bottom: 30px;
     }
 
 }
@@ -130,7 +137,7 @@
     }
 
     &__date-title, &__time-title, &__geo-title {
-        padding: 17px 0;
+        padding: 15px 0;
         font: 400 16px/26px Russia;
         word-break: break-word;
         overflow: hidden;
@@ -149,9 +156,10 @@
     &__file-btn {
         display: flex;
         margin-right: 14px;
-        padding: 9px 23px 9px 0;
+        padding: 9px 26px 9px 0;
 
         font: 400 16px/26px Russia;
+        word-break: break-all;
         overflow: hidden;
 
         color: #3464E0;
@@ -202,6 +210,7 @@
     display: flex;
     flex-direction: column;
  }
+ 
  .accordion {
      &__input{
         display: none;
@@ -211,23 +220,60 @@
 // Блок детализация поездки
 
 .detailing{
-    &__tab{
-        display: flex;
-        flex-direction: column;
-        flex-basis: 100%;
+    position: relative;
+
+    margin-bottom: 36px;
+
+    overflow: hidden;
+
+    @media (max-width: 1390px) {
+        margin-bottom: 0;
+    }
+
+    &::after, &::before {       
+        content: '';
+
+        position: absolute;
+
+        background: #C3CAD6;
+    }
+
+    &::after {
+        top: 31px;
+        right: 14px;
+
+        width: 17px;
+        height: 1px;
+    }
+
+    &::before{
+        top: 23px;
+        right: 22px;
+
+        width: 1px;
+        height: 17px;
+    }
+
+    &.active::after {
+        width: 17px;
+        height: 1px;
+    }
+
+    &.active::before{
+        width: 0;
+        height:0;
     }
 
     &__title{
-        position: relative;
         display: flex;
         align-items: center;
         flex-basis: 100%;
-        margin-bottom: 10PX;
-        padding: 11px 36px 11px 20px;
-        height: 60px;
+        margin-right: 0;
+        margin-bottom: 17px;
+        padding: 17px 36px 17px 20px;
 
         font: 400 22px/26px Russia;
-        word-break: break-word;
+        word-break: break-all;
         overflow: hidden;
         
         color: #444444;
@@ -236,30 +282,21 @@
         border-radius: 4px;
 
         @media (max-width: 479px) {
-            font-size: 16px;
-        }
-
-        &:after {
-            content: '';
-
-            width: 17px;
-            height: 1px;
-
-            position: absolute;
-            right: 14px;
-            
-            background: #C3CAD6;
+            font-size: 14px;
         }
     }
 
     &__content{
-        @media (max-width: 991.98px) {
+        @media (max-width: 1390px) {
             overflow-x: scroll;
         }
     }
 
     &__btn{
-        margin-left: 18px;
+        position: absolute;
+        top: 12px;
+        left: 259px;
+        
         width: 115px;
         height: 38px;
 
@@ -281,39 +318,51 @@
 
 }
 
-.council-content__detailing :checked+.detailing__title::after {
-    content: '';
-
-    width: 17px;
-    height: 1px;
-
-    position: absolute;
-    right: 14px;
-    
-    background: #C3CAD6;
-}
-
-.council-content__detailing :checked+.detailing__title::before {
-    content: '';
-
-    width: 1px;
-    height: 17px;
-
-    position: absolute;
-    right: 22px;
-    
-    background: #C3CAD6;
-}
-
 // Блок  подтвержденный состав
 
 .composition {
+    position: relative;
+
+    &::after, &::before {       
+        content: '';
+
+        position: absolute;
+
+        background: #C3CAD6;
+    }
+
+    &::after {
+        top: 29px;
+        right: 14px;
+
+        width: 17px;
+        height: 1px;
+    }
+
+    &::before{
+        top: 21px;
+        right: 22px;
+
+        width: 1px;
+        height: 17px;
+    }
+
+    &.active::after {
+        width: 17px;
+        height: 1px;
+    }
+
+    &.active::before{
+        width: 0;
+        height:0;
+    }
+
     &__title{
         display: flex;
         align-items: center;
         flex-basis: 100%;
-        padding: 11px 36px 11px 20px;
-        height: 60px;
+        margin-right: 0;
+        padding: 17px 36px 17px 20px;
 
         font: 400 22px/26px Russia;
         word-break: break-word;
@@ -325,63 +374,31 @@
         border-radius: 4px;
 
         @media (max-width: 479px) {
-            font-size: 16px;
-        }
-
-        &:after {
-            content: '';
-
-            width: 17px;
-            height: 1px;
-
-            position: absolute;
-            right: 34px;
-            
-            background: #C3CAD6;
+            font-size: 14px;
         }
     }
-}
-
-.council-content__composition :checked+.composition__title::after {
-    content: '';
-
-    width: 17px;
-    height: 1px;
-
-    position: absolute;
-    right: 34px;
-    
-    background: #C3CAD6;
-}
-
-.council-content__composition :checked+.composition__title::before {
-    content: '';
-
-    width: 1px;
-    height: 17px;
-
-    position: absolute;
-    right: 42px;
-    
-    background: #C3CAD6;
 }
 
 // Таблица блока детализации поездки
 
 .detailing-table{
     border-collapse: collapse;
+    table-layout: fixed;
+    width: 938px;
+    
     
     &__head{
         font: 500 16px/24px Russia;
+        word-break: break-all;
         overflow: hidden;
 
-        height: 80px;
+        // height: 80px;
 
         text-align: left;
         
         color: #444444;
 
-        overflow-Y: auto;
+        // overflow-Y: auto;s
     }
     
 
@@ -393,34 +410,102 @@
     }
 
     &__row{
-        height: 120px;
+        // height: 120px;
         border-bottom: 2px solid #F1F4F9;
     }
 
     &__row--head{
+        width: 938px;
+        padding-bottom: 20px;
         height: 0;
+    }
+
+    &__row--head > &__cell:nth-child(1) {
+        padding-top: 25px;
+        padding-left: 16px;
+        padding-bottom: 13px;
+        width: 319px;
+    }
+
+    &__row--head > &__cell:nth-child(2) {
+        padding-top: 24px;
+        padding-left: 30px;
+        padding-bottom: 13px;
+        width: 140px;
+    }
+
+    &__row--head > &__cell:nth-child(3) {
+        padding-left: 32px;
+        width: 218px;    
+    }
+
+    &__row--head > &__cell:nth-child(4) {
+        padding-top: 25px;
+        padding-left: 35px;
+        padding-bottom: 13px;      
+        width: 110px;
+    }
+
+    &__row--head > &__cell:nth-child(5) {
+        padding-left: 5px;        
+        width: 150px;
     }
 
     
     &__cell{
-        padding-top: 20px;
-        padding-left: 10px;
-        padding-bottom: 20px;
-        padding-right: 10px;
+        position: relative;
+        // outline: 1px solid black;
+        word-break: break-word;
         
         // max-width: 269px;
 
         @media (max-width: 1390px) {
-            padding: 0px 10px 0 0;
+            // padding: 0px 10px 0 0;
             // max-width: 0;
         }
     }
 
+    &__row--body > &__cell {
+        padding-bottom: 24px;
+    }
+
+    &__row--body> &__cell:nth-child(1) {
+        padding-top: 26px;
+        padding-left: 55px;
+
+        line-height: 22px;
+    }
+
+    &__row--body> &__cell:nth-child(2) {
+        padding-top: 26px;
+        padding-left: 29px;
+    }
+
+    &__row--body> &__cell:nth-child(3) {
+        padding-top: 29px;
+        padding-left: 32px;
+
+        line-height: 22px;
+    }
+
+    &__row--body> &__cell:nth-child(4) {
+        padding-top: 26px;
+        padding-left: 37px;
+    }
+
+    &__row--body> &__cell:nth-child(5) {
+        padding-top: 26px;
+        padding-left: 24px;
+    }
+
     &__btn{
+        position: absolute;
+        top: 26px;
+        left: 8px;
+        
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-right: 20px;
         margin-bottom: 11px;
         
         width: 28px;
@@ -429,6 +514,10 @@
         background: #F1F4F9;
 
         border-radius: 50%;
+
+        &:nth-child(2) {
+            top: 65px;
+        }
     }
 
     &__btn-edit {
@@ -438,9 +527,7 @@
         fill: #3464E0;
     }
 
-    &__btn-del{
-        position: relative;
-        
+    &__btn-del{        
         width: 12px;
         height: 12px;
 
@@ -463,9 +550,6 @@
         }
     }
 
-    &__title{
-        margin-right: 24px;
-    }
 
     &__result-icon{
         margin-right: 6px;
@@ -478,6 +562,8 @@
     &__btn-result{
         display: flex;
         align-items: center;
+
+        font: 400 16px/26px Russia;
         
         color: #3464E0;
 

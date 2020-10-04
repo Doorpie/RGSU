@@ -30,7 +30,7 @@
 		height: 0;
 		
 		border-bottom: 66px solid #F1F4F9;
-		border-right: 100vw solid transparent;  
+		border-right: 94vw solid transparent;  
 	}
 
 	@media (max-width: 480px)  {
@@ -89,22 +89,29 @@
 	}
 
 	span {
-		background-color: #fff;
 		position: absolute;
+		top: 20px;
+		left: 0;
+
 		width: 100%;
 		height: 2px;
-		left: 0;
-		top: 20px;
+
+		background-color: #fff;
 	}
 
 	&:before,
 	&:after {
 		content: '';
-		background-color: #fff;
+
 		position: absolute;
+		left: 0;
+
 		width: 100%;
 		height: 2px;
-		left: 0;
+
+		background-color: #fff;
+
+		transition: all 0.5s ease;
 	}
 
 	&:before {
@@ -112,7 +119,7 @@
 	}
 
 	&:after {
-		bottom: 9px;
+		bottom: 8px;
 	}
 
 	&._active:before {

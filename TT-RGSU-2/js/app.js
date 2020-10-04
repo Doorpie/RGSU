@@ -192,16 +192,8 @@ $(document).ready(function(){
 //События открытия/закрытия аккордион
    $('.accordion__title').click(function(event){
       $(this).next().slideToggle(300);
+      $(this).parent().toggleClass('active');
    })
-
-
-   $('.detailing__title').click(function(){
-      $('.detailing__content').slideToggle(300);
-   });
-
-   $('.composition__title').click(function(){
-      $('.composition__content').slideToggle(300);
-   });
 
    $('.slider').slick({
       arrows: false,

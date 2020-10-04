@@ -10,7 +10,7 @@
 		<main class="page">
 			<div class="container">
 				<div class="row">
-					<div class="col-3 col-sm-3 col-lg-3 col-xl-3">
+					<div class="col-3 col-sm-3 col-lg-3 col-xl-3 position-relative">
 						<aside class="page__sidebar sidebar">
 							@@include('_sidebar.html',{})
 						</aside>
@@ -30,7 +30,7 @@
 									<div class="tabs__item is-active tabs__item--council" data-tab-name="tab-1">Текущий</div>
 									<div class="tabs__item" data-tab-name="tab-2">Архив</div>
 								</div>
-								<div class="tabs__content">
+								<div class="tabs__content tabs__content--council">
 									<div class="tab is-active tab-1 ">
 										<div class="council__council-current council-current">
 											<h2 class="council-current__title">Ученый совет: <span class="council-current__title-date">22 августа 2020</span></h2>
@@ -67,12 +67,9 @@
 												</div>
 											</div>
 											<div class="council-current__content council-content">
-												<div class="accordion__tab council-content__detailing">
-													<input class="accordion__input detailing__input" type="checkbox" id="detailing" name="tab-group-2">
-													<label for="detailing" class="accordion__tab-title detailing__title">Детализация повестки
-														<button class="detailing__btn">Добавить</button>
-													</label> 
-													<section class="accordion__tab-content detailing__content"> 
+												<div class="council-content__accordion accordion detailing active">
+													<h3 class="accordion__title detailing__title">Детализация повестки</h3>
+													<div class="accordion__content detailing__content">
 														<table class="detailing__table detailing-table">
 															<thead class="detailing-table__head">
 																<tr class="detailing-table__row detailing-table__row--head">
@@ -85,8 +82,8 @@
 																</tr>
 															</thead>
 															<tbody class="detailing-table__body">
-																<tr class="detailing-table__row">
-																	<td class="detailing-table__cell detailing-table__icon">
+																<tr class="detailing-table__row detailing-table__row--body">
+																	<td class="detailing-table__cell" colspan="2">
 																		<button class="detailing-table__btn">
 																			<svg class="detailing-table__btn-edit" width="12px" height="12px">
 																				<use href="./img/icons/sprite/sprite.svg#pencil"></use>
@@ -95,9 +92,9 @@
 																		<button class="detailing-table__btn">
 																			<span class="detailing-table__btn-del"></span>
 																		</button>
+																		<p class="detailing-table__text">Сообщество и наши авторы пережили трансформацию, и теперь они еще умнее, профессиональнее</p>
 																	</td>
-																	<td class="detailing-table__cell detailing-table__title">Сообщество и наши авторы пережили трансформацию, и теперь они еще умнее, профессиональнее</td>
-																	<td class="detailing-table__cell">Скороходова 
+																	<td class="detailing-table__cell">Скороходова <br>
 																		Елена Юрьевна</td>
 																	<td class="detailing-table__cell detailing-table__spokesperson">Кадровый коммитет РГСУ №313 от 24.12.2019</td>
 																	<td class="detailing-table__cell detailing-table__time">15 минут</td>
@@ -110,8 +107,8 @@
 																		</button>
 																	</td>
 																</tr>
-																<tr class="detailing-table__row">
-																	<td class="detailing-table__cell detailing-table__icon">
+																<tr class="detailing-table__row detailing-table__row--body">
+																	<td class="detailing-table__cell" colspan="2">
 																		<button class="detailing-table__btn">
 																			<svg class="detailing-table__btn-edit" width="12px" height="12px">
 																				<use href="./img/icons/sprite/sprite.svg#pencil"></use>
@@ -120,12 +117,12 @@
 																		<button class="detailing-table__btn">
 																			<span class="detailing-table__btn-del"></span>
 																		</button>
+																		<p class="detailing-table__text">Сообщество и наши авторы пережили трансформацию, и теперь они еще умнее, профессиональнее</p>
 																	</td>
-																	<td class="detailing-table__cell detailing-table__title">Сообщество и наши авторы пережили трансформацию, и теперь они еще умнее, профессиональнее</td>
-																	<td class="detailing-table__cell">Скороходова 
+																	<td class="detailing-table__cell">Скороходова <br>
 																		Елена Юрьевна</td>
 																	<td class="detailing-table__cell detailing-table__spokesperson">Кадровый коммитет РГСУ №313 от 24.12.2019</td>
-																	<td class="detailing-table__cell detailing-table__time">15 минут</td>
+																	<td class="detailing-table__cell detailing-table__time">5 минут</td>
 																	<td class="detailing-table__cell detailing-table__result">
 																		<button class="detailing-table__btn-result">
 																			<svg class="detailing-table__result-icon" width="36" height="36">
@@ -135,8 +132,8 @@
 																		</button>
 																	</td>
 																</tr>
-																<tr class="detailing-table__row">
-																	<td class="detailing-table__cell detailing-table__icon">
+																<tr class="detailing-table__row detailing-table__row--body">
+																	<td class="detailing-table__cell" colspan="2">
 																		<button class="detailing-table__btn">
 																			<svg class="detailing-table__btn-edit" width="12px" height="12px">
 																				<use href="./img/icons/sprite/sprite.svg#pencil"></use>
@@ -145,23 +142,17 @@
 																		<button class="detailing-table__btn">
 																			<span class="detailing-table__btn-del"></span>
 																		</button>
+																		<p class="detailing-table__text">Сообщество и наши авторы пережили трансформацию, и теперь они еще умнее, профессиональнее</p>
 																	</td>
-																	<td class="detailing-table__cell detailing-table__title">Сообщество и наши авторы пережили трансформацию, и теперь они еще умнее, профессиональнее</td>
-																	<td class="detailing-table__cell">Скороходова 
+																	<td class="detailing-table__cell">Скороходова <br>
 																		Елена Юрьевна</td>
 																	<td class="detailing-table__cell detailing-table__spokesperson">Кадровый коммитет РГСУ №313 от 24.12.2019</td>
-																	<td class="detailing-table__cell detailing-table__time">15 минут</td>
+																	<td class="detailing-table__cell detailing-table__time">5 минут</td>
 																	<td class="detailing-table__cell detailing-table__result">
-																		<button class="detailing-table__btn-result">
-																			<svg class="detailing-table__result-icon" width="36" height="36">
-																				<use href="./img/icons/sprite/sprite.svg#document"></use>
-																			</svg>
-																			Результаты
-																		</button>
 																	</td>
 																</tr>
-																<tr class="detailing-table__row">
-																	<td class="detailing-table__cell detailing-table__icon">
+																<tr class="detailing-table__row detailing-table__row--body">
+																	<td class="detailing-table__cell" colspan="2">
 																		<button class="detailing-table__btn">
 																			<svg class="detailing-table__btn-edit" width="12px" height="12px">
 																				<use href="./img/icons/sprite/sprite.svg#pencil"></use>
@@ -170,12 +161,12 @@
 																		<button class="detailing-table__btn">
 																			<span class="detailing-table__btn-del"></span>
 																		</button>
+																		<p class="detailing-table__text">Сообщество и наши авторы пережили трансформацию, и теперь они еще умнее, профессиональнее</p>
 																	</td>
-																	<td class="detailing-table__cell detailing-table__title">Сообщество и наши авторы пережили трансформацию, и теперь они еще умнее, профессиональнее</td>
-																	<td class="detailing-table__cell">Скороходова 
+																	<td class="detailing-table__cell">Скороходова <br>
 																		Елена Юрьевна</td>
 																	<td class="detailing-table__cell detailing-table__spokesperson">Кадровый коммитет РГСУ №313 от 24.12.2019</td>
-																	<td class="detailing-table__cell detailing-table__time">15 минут</td>
+																	<td class="detailing-table__cell detailing-table__time">5 минут</td>
 																	<td class="detailing-table__cell detailing-table__result">
 																		<button class="detailing-table__btn-result">
 																			<svg class="detailing-table__result-icon" width="36" height="36">
@@ -187,15 +178,13 @@
 																</tr>
 															</tbody>
 														</table>
-													</section> 
+													</div>
+													<button class="accordion__btn detailing__btn">Добавить</button>
 												</div>
-												<div class="accordion__tab council-content__composition">
-													<input class="accordion__input composition__input" type="checkbox" id="composition" name="tab-group-2">
-													<label for="composition" class="accordion__tab-title composition__title">Подтвержденный состав
-													</label> 
-													<section class="accordion__tab-content composition__content"> 
-														<p></p>
-													</section> 
+												<div class="council-content__accordion accordion composition active">
+													<h3 class="accordion__title composition__title">Подтвержденный состав</h3>
+													<div class="accordion__content composition__content">
+													</div>
 												</div>
 											</div>
 										</div>
