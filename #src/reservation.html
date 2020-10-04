@@ -42,7 +42,7 @@
 														</label>
 														<select name="platform-select" id="platform"
 															class="select-place__platform-select" required>
-															<option>Выберите</option>
+															<option value="">Выберите</option>
 															<option value="v1">1</option>
 															<option value="v2">2</option>
 														</select>
@@ -52,7 +52,7 @@
 															помещение<span class="events-form--red"> *</span></label>
 														<select name="room-select" id="room"
 															class="select-place__room-select" required>
-															<option>Выберите</option>
+															<option value="">Выберите</option>
 															<option value="v1">1</option>
 															<option value="v2">2</option>
 														</select>
@@ -257,9 +257,8 @@
 											<div class="events-form__reservation events-reservation">
 												<div class="row">
 													<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-														<label for="reservation-content"
-														    class="events-reservation__title">Бронирование<span
-															class="events-form--red"> *</span></label>
+														<p class="events-reservation__title">Бронирование<span
+															class="events-form--red"> *</span></з>
 													</div>
 													<div class="col-12 col-sm-6 col-lg-8 col-xl-9">
 														<p class="events-reservation__content">Ул .
@@ -270,14 +269,14 @@
 											<div class="events-form__date events-date">
 												<div class="row">
 													<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-														<label for="date-title" class="events-date__title">Дата
+														<p class="events-date__title">Дата
 															<span class="events-form--red"> *</span>
-														</label>
+														</з>
 													</div>
 													<div class="col-12 col-sm-6 col-lg-8 col-xl-9 d-flex flex-column flex-lg-row">
 														<input type="date" class="events-date__date" required>
 														<select name="date-start" id="date-start" class="events-date__start" required>
-															<option class="events__item">9-00</option>
+															<option value="" class="events__item">9-00</option>
 															<option value="s2" class="events__item">10-00</option>
 															<option value="s3" class="events__item">11-00</option>
 															<option value="s4" class="events__item">12-00</option>
@@ -288,7 +287,7 @@
 															<option value="s9" class="events__item">17-00</option>
 														</select>
 														<select name="date-end" id="date-end" class="events-date__end">
-															<option class="events__item">10-00</option>
+															<option value="" class="events__item">10-00</option>
 															<option value="e2" class="events__item">11-00</option>
 															<option value="e3" class="events__item">12-00</option>
 															<option value="e4" class="events__item">13-00</option>
