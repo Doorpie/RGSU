@@ -17,13 +17,13 @@
 					</div>
 					<div class="col-12 col-sm-12 col-lg-9 col-xl-9">
 						<div class="page__reservation reservation">
-							<section class="reservation__breadcrumbs breadcrumbs">
+							<div class="reservation__breadcrumbs breadcrumbs">
 								<ul class="breadcrumbs__list">
 									<li class=" breadcrumbs__item"><a href="./index.html" class="breadcrumbs__link">Главная </a>
 									</li>
 									<li class=" breadcrumbs__item">Бронирование</li>
 								</ul>
-							</section>
+							</div>
 							<h1 class="reservation__title">Бронирование</h1>
 							<div class="reservation__tabs tabs">
 								<div class="tabs__list">
@@ -33,22 +33,23 @@
 								</div>
 								<div class="tabs__content">
 									<div class="tab is-active tab-1 ">
-										<form action="" class="reservation__events-form events-form" method="GET">
+										<form action="#" class="reservation__events-form events-form" method="GET">
 											<div class="events-form__select-place">
 												<div class="row">
 													<div class="col-12 col-sm-6 col-lg-6 col-xl-6">
-														<lavel for="platform" class="select-place__platform">Выберите
-															площадку<span class="events-form--red"> *</span></lavel>
+														<label for="platform" class="select-place__platform">Выберите
+															площадку<span class="events-form--red"> *</span>
+														</label>
 														<select name="platform-select" id="platform"
 															class="select-place__platform-select" required>
-															<option value="v0" selected disabled>Выберите</option>
+															<option selected disabled>Выберите</option>
 															<option value="v1">1</option>
 															<option value="v2">2</option>
 														</select>
 													</div>
 													<div class="col-12 col-sm-6 col-lg-6 col-xl-6">
-														<lavel for="room" class="select-place__room">Выберите
-															помещение<span class="events-form--red"> *</span></lavel>
+														<label for="room" class="select-place__room">Выберите
+															помещение<span class="events-form--red"> *</span></label>
 														<select name="room-select" id="room"
 															class="select-place__room-select" required>
 															<option value="v0" selected disabled>Выберите</option>
@@ -303,19 +304,19 @@
 											<div class="events-form__events-name events-name">
 												<div class="row">
 													<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-														<label for="" class="events-name__title">Название мероприятия
+														<label for="name-title" class="events-name__title">Название мероприятия
 															<span class="events-form--red"> *</span>
 														</label>
 													</div>													
 													<div class="col-12 col-sm-6 col-lg-8 col-xl-9">
-														<textarea name="" id="" cols="30" rows="30" class="events-name__text"></textarea>
+														<textarea name="e5-rexarea" id="e5" cols="30" rows="30" class="events-name__text"></textarea>
 													</div>
 												</div>
 											</div>
 											<div class="events-form__equipment events-equipment">
 														<div class="row">
 															<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-																<label for="" class="events-equipment__title">Выберите
+																<label for="equipment-title" class="events-equipment__title">Выберите
 																	оборудование<span class="events-form--red">
 																		*</span></label>
 															</div>
@@ -325,8 +326,8 @@
 																		<label for="e1"
 																			class="events-equipment__name">Звуковое
 																			оборудование
-																			<input type="checkbox" name="" id="e1"
-																				class="events-equipment__input visually-hidden">
+																			<input type="checkbox" name="e1-input" id="e1"
+																				class="events-equipment__input">
 																			<span class="events-equipment__checkbox">
 																				<svg class="events-equipment__img-item" width="12" height="8">
 																					<use
@@ -339,7 +340,7 @@
 																	<li class="events-equipment__item">
 																		<label for="e2"
 																			class="events-equipment__name">Микрофон
-																			<input type="checkbox" name="" id="e2"
+																			<input type="checkbox" name="e2-input" id="e2"
 																				class="events-equipment__input visually-hidden">
 																			<span class="events-equipment__checkbox">
 																				<svg class="events-equipment__img-item" width="12" height="8">
@@ -354,7 +355,7 @@
 																		<label for="e3"
 																			class="events-equipment__name">Мобильный
 																			проектор
-																			<input type="checkbox" name="" id="e3"
+																			<input type="checkbox" name=e3-input"" id="e3"
 																				class="events-equipment__input visually-hidden">
 																			<span class="events-equipment__checkbox">
 																				<svg class="events-equipment__img-item" width="12" height="8">
@@ -369,7 +370,7 @@
 																		<label for="e4"
 																			class="events-equipment__name">Мобильный
 																			проектор
-																			<input type="checkbox" name="" id="e4"
+																			<input type="checkbox" name="e4-input" id="e4"
 																				class="events-equipment__input visually-hidden">
 																			<span class="events-equipment__checkbox">
 																				<svg class="events-equipment__img-item" width="12" height="8">
