@@ -14,7 +14,9 @@ $(document).ready(function(){
 
    $('.slider').slick({
       arrows: false,
-      dots: true
+      dots: true,
+      touchMove: false,
+      touchThreshold: false
    });
 });
 
